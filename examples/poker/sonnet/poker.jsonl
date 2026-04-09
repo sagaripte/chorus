@@ -1,0 +1,114 @@
+{"id":1,"ts":1775774336583,"type":"game_start","players":["Vince","Maya","Dutch","Suki","Rex"],"chips":1000}
+{"id":2,"ts":1775774336584,"type":"hand_start","hand":1,"pot":30,"blinds":{"sb":"Maya","bb":"Dutch"}}
+{"id":3,"ts":1775774337787,"type":"Suki","from":"Suki","content":"CALL\nOoh, I just love the smell of chaos in the morning!"}
+{"id":4,"ts":1775774337787,"type":"action","street":"Pre-flop","player":"Suki","action":"call","amount":20,"talk":"Ooh, I just love the smell of chaos in the morning!","pot":50,"chips":980}
+{"id":5,"ts":1775774339404,"type":"Rex","from":"Rex","content":"CALL\nChaos is just opportunity in disguise."}
+{"id":6,"ts":1775774339405,"type":"action","street":"Pre-flop","player":"Rex","action":"call","amount":20,"talk":"Chaos is just opportunity in disguise.","pot":70,"chips":980}
+{"id":7,"ts":1775774341353,"type":"Vince","from":"Vince","content":"RAISE 60\nYou're all just donating to my chip stack today, appreciate it."}
+{"id":8,"ts":1775774341353,"type":"action","street":"Pre-flop","player":"Vince","action":"raise","amount":60,"talk":"You're all just donating to my chip stack today, appreciate it.","pot":150,"chips":920}
+{"id":9,"ts":1775774342547,"type":"Maya","from":"Maya","content":"FOLD\nNot worth my time."}
+{"id":10,"ts":1775774342547,"type":"action","street":"Pre-flop","player":"Maya","action":"fold","amount":0,"talk":"Not worth my time.","pot":150,"chips":990}
+{"id":11,"ts":1775774343686,"type":"Dutch","from":"Dutch","content":"CALL\nNot the prettiest hand, but K-high suited has seen uglier flops."}
+{"id":12,"ts":1775774343686,"type":"action","street":"Pre-flop","player":"Dutch","action":"call","amount":60,"talk":"Not the prettiest hand, but K-high suited has seen uglier flops.","pot":210,"chips":920}
+{"id":13,"ts":1775774344527,"type":"Suki","from":"Suki","content":"CALL\nI have absolutely no idea what I'm doing and I love it!"}
+{"id":14,"ts":1775774344527,"type":"action","street":"Pre-flop","player":"Suki","action":"call","amount":60,"talk":"I have absolutely no idea what I'm doing and I love it!","pot":270,"chips":920}
+{"id":15,"ts":1775774345965,"type":"Rex","from":"Rex","content":"FOLD\nNot every battle is worth fighting."}
+{"id":16,"ts":1775774345965,"type":"action","street":"Pre-flop","player":"Rex","action":"fold","amount":0,"talk":"Not every battle is worth fighting.","pot":270,"chips":980}
+{"id":17,"ts":1775774345966,"type":"street","name":"Flop","community":"A♣ K♠ 7♥","pot":270}
+{"id":18,"ts":1775774347428,"type":"Dutch","from":"Dutch","content":"RAISE 120\nSecond pair on the flop — not bad for a hand you almost didn't invite to the party."}
+{"id":19,"ts":1775774347428,"type":"action","street":"Flop","player":"Dutch","action":"raise","amount":120,"talk":"Second pair on the flop — not bad for a hand you almost didn't invite to the party.","pot":390,"chips":800}
+{"id":20,"ts":1775774348215,"type":"Suki","from":"Suki","content":"CALL\nThe universe is telling me something and I refuse to listen to reason!"}
+{"id":21,"ts":1775774348216,"type":"action","street":"Flop","player":"Suki","action":"call","amount":120,"talk":"The universe is telling me something and I refuse to listen to reason!","pot":510,"chips":800}
+{"id":22,"ts":1775774349410,"type":"Vince","from":"Vince","content":"FOLD\nNothing on that board for me, but don't get comfortable — I'll be taking your chips soon enough."}
+{"id":23,"ts":1775774349410,"type":"action","street":"Flop","player":"Vince","action":"fold","amount":0,"talk":"Nothing on that board for me, but don't get comfortable — I'll be taking your chips soon enough.","pot":510,"chips":920}
+{"id":24,"ts":1775774349410,"type":"street","name":"Turn","community":"A♣ K♠ 7♥ 3♥","pot":510}
+{"id":25,"ts":1775774350508,"type":"Dutch","from":"Dutch","content":"RAISE 200\nTwo pair on board, my kings are still looking mighty fine — how about yours?"}
+{"id":26,"ts":1775774350508,"type":"action","street":"Turn","player":"Dutch","action":"raise","amount":200,"talk":"Two pair on board, my kings are still looking mighty fine — how about yours?","pot":710,"chips":600}
+{"id":27,"ts":1775774353448,"type":"Suki","from":"Suki","content":"FOLD\nSometimes the chaos gods say no, and who am I to argue!"}
+{"id":28,"ts":1775774353449,"type":"action","street":"Turn","player":"Suki","action":"fold","amount":0,"talk":"Sometimes the chaos gods say no, and who am I to argue!","pot":710,"chips":800}
+{"id":29,"ts":1775774353449,"type":"hand_end","hand":1,"winner":"Dutch","pot":710,"method":"fold"}
+{"id":30,"ts":1775774353450,"type":"hand_start","hand":2,"pot":30,"blinds":{"sb":"Dutch","bb":"Suki"}}
+{"id":31,"ts":1775774354522,"type":"Rex","from":"Rex","content":"FOLD\nNot worth my time."}
+{"id":32,"ts":1775774354522,"type":"action","street":"Pre-flop","player":"Rex","action":"fold","amount":0,"talk":"Not worth my time.","pot":30,"chips":980}
+{"id":33,"ts":1775774356045,"type":"Vince","from":"Vince","content":"FOLD\nPatience is a weapon, and I'm just sharpening mine."}
+{"id":34,"ts":1775774356046,"type":"action","street":"Pre-flop","player":"Vince","action":"fold","amount":0,"talk":"Patience is a weapon, and I'm just sharpening mine.","pot":30,"chips":920}
+{"id":35,"ts":1775774357433,"type":"Maya","from":"Maya","content":"FOLD\nPatience cuts both ways, Vince."}
+{"id":36,"ts":1775774357433,"type":"action","street":"Pre-flop","player":"Maya","action":"fold","amount":0,"talk":"Patience cuts both ways, Vince.","pot":30,"chips":990}
+{"id":37,"ts":1775774359552,"type":"Dutch","from":"Dutch","content":"CALL\nSuited connectors on the cheap — even old dogs know a good price when they see one."}
+{"id":38,"ts":1775774359552,"type":"action","street":"Pre-flop","player":"Dutch","action":"call","amount":10,"talk":"Suited connectors on the cheap — even old dogs know a good price when they see one.","pot":40,"chips":1290}
+{"id":39,"ts":1775774361293,"type":"Suki","from":"Suki","content":"CHECK\nJ-2 offsuit? Sure, why not, I've won with worse!"}
+{"id":40,"ts":1775774361293,"type":"action","street":"Pre-flop","player":"Suki","action":"check","amount":0,"talk":"J-2 offsuit? Sure, why not, I've won with worse!","pot":40,"chips":780}
+{"id":41,"ts":1775774361293,"type":"street","name":"Flop","community":"6♦ J♦ 9♣","pot":40}
+{"id":42,"ts":1775774362395,"type":"Dutch","from":"Dutch","content":"CHECK\nBottom pair on a scary board — sometimes the smartest move is to let the other fools lead."}
+{"id":43,"ts":1775774362395,"type":"action","street":"Flop","player":"Dutch","action":"check","amount":0,"talk":"Bottom pair on a scary board — sometimes the smartest move is to let the other fools lead.","pot":40,"chips":1290}
+{"id":44,"ts":1775774363429,"type":"Suki","from":"Suki","content":"RAISE 40\nTop pair with a trash kicker — this is basically a royal flush in my world!"}
+{"id":45,"ts":1775774363429,"type":"action","street":"Flop","player":"Suki","action":"raise","amount":40,"talk":"Top pair with a trash kicker — this is basically a royal flush in my world!","pot":80,"chips":740}
+{"id":46,"ts":1775774364533,"type":"Dutch","from":"Dutch","content":"FOLD\nBottom pair against Suki's top pair enthusiasm — even I know when the math doesn't lie."}
+{"id":47,"ts":1775774364533,"type":"action","street":"Flop","player":"Dutch","action":"fold","amount":0,"talk":"Bottom pair against Suki's top pair enthusiasm — even I know when the math doesn't lie.","pot":80,"chips":1290}
+{"id":48,"ts":1775774364533,"type":"hand_end","hand":2,"winner":"Suki","pot":80,"method":"fold"}
+{"id":49,"ts":1775774364534,"type":"hand_start","hand":3,"pot":30,"blinds":{"sb":"Suki","bb":"Rex"}}
+{"id":50,"ts":1775774365542,"type":"Vince","from":"Vince","content":"RAISE 80\nAce in hand, fear in your eyes — let's dance."}
+{"id":51,"ts":1775774365542,"type":"action","street":"Pre-flop","player":"Vince","action":"raise","amount":80,"talk":"Ace in hand, fear in your eyes — let's dance.","pot":130,"chips":820}
+{"id":52,"ts":1775774367236,"type":"Maya","from":"Maya","content":"FOLD\nNot my dance floor today."}
+{"id":53,"ts":1775774367236,"type":"action","street":"Pre-flop","player":"Maya","action":"fold","amount":0,"talk":"Not my dance floor today.","pot":130,"chips":990}
+{"id":54,"ts":1775774368591,"type":"Dutch","from":"Dutch","content":"FOLD\nQ-5 offsuit against someone claiming an ace — I didn't get old by playing hero with rags."}
+{"id":55,"ts":1775774368591,"type":"action","street":"Pre-flop","player":"Dutch","action":"fold","amount":0,"talk":"Q-5 offsuit against someone claiming an ace — I didn't get old by playing hero with rags.","pot":130,"chips":1290}
+{"id":56,"ts":1775774369651,"type":"Suki","from":"Suki","content":"CALL\nHearts are my lucky suit and I'm feeling absolutely unhinged today!"}
+{"id":57,"ts":1775774369651,"type":"action","street":"Pre-flop","player":"Suki","action":"call","amount":90,"talk":"Hearts are my lucky suit and I'm feeling absolutely unhinged today!","pot":220,"chips":720}
+{"id":58,"ts":1775774371252,"type":"Rex","from":"Rex","content":"FOLD\nAn ace with a deuce is just a pretty face with no backbone."}
+{"id":59,"ts":1775774371253,"type":"action","street":"Pre-flop","player":"Rex","action":"fold","amount":0,"talk":"An ace with a deuce is just a pretty face with no backbone.","pot":220,"chips":960}
+{"id":60,"ts":1775774371253,"type":"street","name":"Flop","community":"5♦ 7♦ 8♣","pot":220}
+{"id":61,"ts":1775774373532,"type":"Suki","from":"Suki","content":"RAISE 80\nMissed everything but I'll bet like I hit the moon!"}
+{"id":62,"ts":1775774373533,"type":"action","street":"Flop","player":"Suki","action":"raise","amount":80,"talk":"Missed everything but I'll bet like I hit the moon!","pot":300,"chips":640}
+{"id":63,"ts":1775774374525,"type":"Vince","from":"Vince","content":"RAISE 200\nI've got more draws than a kindergarten class, and more nerve than all of you combined."}
+{"id":64,"ts":1775774374525,"type":"action","street":"Flop","player":"Vince","action":"raise","amount":200,"talk":"I've got more draws than a kindergarten class, and more nerve than all of you combined.","pot":580,"chips":540}
+{"id":65,"ts":1775774375444,"type":"Suki","from":"Suki","content":"FOLD\nEven chaos has its limits, Vince, you beautiful maniac!"}
+{"id":66,"ts":1775774375444,"type":"action","street":"Flop","player":"Suki","action":"fold","amount":0,"talk":"Even chaos has its limits, Vince, you beautiful maniac!","pot":580,"chips":640}
+{"id":67,"ts":1775774375444,"type":"hand_end","hand":3,"winner":"Vince","pot":580,"method":"fold"}
+{"id":68,"ts":1775774375445,"type":"hand_start","hand":4,"pot":30,"blinds":{"sb":"Rex","bb":"Vince"}}
+{"id":69,"ts":1775774376213,"type":"Maya","from":"Maya","content":"FOLD\nWaiting for the right moment."}
+{"id":70,"ts":1775774376213,"type":"action","street":"Pre-flop","player":"Maya","action":"fold","amount":0,"talk":"Waiting for the right moment.","pot":30,"chips":990}
+{"id":71,"ts":1775774377738,"type":"Dutch","from":"Dutch","content":"FOLD\n8-3 offsuit is just a slow way to lose money — I prefer faster methods."}
+{"id":72,"ts":1775774377739,"type":"action","street":"Pre-flop","player":"Dutch","action":"fold","amount":0,"talk":"8-3 offsuit is just a slow way to lose money — I prefer faster methods.","pot":30,"chips":1290}
+{"id":73,"ts":1775774378524,"type":"Suki","from":"Suki","content":"CALL\nDiamonds are forever and so is my terrible decision making!"}
+{"id":74,"ts":1775774378524,"type":"action","street":"Pre-flop","player":"Suki","action":"call","amount":20,"talk":"Diamonds are forever and so is my terrible decision making!","pot":50,"chips":620}
+{"id":75,"ts":1775774379218,"type":"Rex","from":"Rex","content":"CALL\nPatience is a weapon."}
+{"id":76,"ts":1775774379218,"type":"action","street":"Pre-flop","player":"Rex","action":"call","amount":10,"talk":"Patience is a weapon.","pot":60,"chips":940}
+{"id":77,"ts":1775774380394,"type":"Vince","from":"Vince","content":"RAISE 60\nI don't need good cards when I've got good nerve."}
+{"id":78,"ts":1775774380394,"type":"action","street":"Pre-flop","player":"Vince","action":"raise","amount":60,"talk":"I don't need good cards when I've got good nerve.","pot":120,"chips":1040}
+{"id":79,"ts":1775774381620,"type":"Suki","from":"Suki","content":"CALL\nSuited cards make my heart sing even when my brain screams no!"}
+{"id":80,"ts":1775774381623,"type":"action","street":"Pre-flop","player":"Suki","action":"call","amount":60,"talk":"Suited cards make my heart sing even when my brain screams no!","pot":180,"chips":560}
+{"id":81,"ts":1775774383011,"type":"Rex","from":"Rex","content":"FOLD\nNot chasing ghosts with a weak kicker."}
+{"id":82,"ts":1775774383011,"type":"action","street":"Pre-flop","player":"Rex","action":"fold","amount":0,"talk":"Not chasing ghosts with a weak kicker.","pot":180,"chips":940}
+{"id":83,"ts":1775774383011,"type":"street","name":"Flop","community":"K♦ 2♠ 10♥","pot":180}
+{"id":84,"ts":1775774384321,"type":"Vince","from":"Vince","content":"RAISE 120\nThat board's got nothing on me, and neither do you two."}
+{"id":85,"ts":1775774384321,"type":"action","street":"Flop","player":"Vince","action":"raise","amount":120,"talk":"That board's got nothing on me, and neither do you two.","pot":300,"chips":920}
+{"id":86,"ts":1775774385926,"type":"Suki","from":"Suki","content":"FOLD\nEven I know when the diamonds have abandoned me!"}
+{"id":87,"ts":1775774385926,"type":"action","street":"Flop","player":"Suki","action":"fold","amount":0,"talk":"Even I know when the diamonds have abandoned me!","pot":300,"chips":560}
+{"id":88,"ts":1775774385926,"type":"hand_end","hand":4,"winner":"Vince","pot":300,"method":"fold"}
+{"id":89,"ts":1775774385927,"type":"hand_start","hand":5,"pot":30,"blinds":{"sb":"Vince","bb":"Maya"}}
+{"id":90,"ts":1775774386976,"type":"Dutch","from":"Dutch","content":"FOLD\nJ-6 offsuit is a hand only a mother could love, and even she'd fold it."}
+{"id":91,"ts":1775774386976,"type":"action","street":"Pre-flop","player":"Dutch","action":"fold","amount":0,"talk":"J-6 offsuit is a hand only a mother could love, and even she'd fold it.","pot":30,"chips":1290}
+{"id":92,"ts":1775774388153,"type":"Suki","from":"Suki","content":"CALL\n4-7 offsuit is basically a secret weapon that nobody expects!"}
+{"id":93,"ts":1775774388153,"type":"action","street":"Pre-flop","player":"Suki","action":"call","amount":20,"talk":"4-7 offsuit is basically a secret weapon that nobody expects!","pot":50,"chips":540}
+{"id":94,"ts":1775774388788,"type":"Rex","from":"Rex","content":"CALL\nNow we're talking."}
+{"id":95,"ts":1775774388788,"type":"action","street":"Pre-flop","player":"Rex","action":"call","amount":20,"talk":"Now we're talking.","pot":70,"chips":920}
+{"id":96,"ts":1775774390335,"type":"Vince","from":"Vince","content":"RAISE 80\nSuited connectors and a chip lead — y'all are in trouble."}
+{"id":97,"ts":1775774390335,"type":"action","street":"Pre-flop","player":"Vince","action":"raise","amount":80,"talk":"Suited connectors and a chip lead — y'all are in trouble.","pot":160,"chips":1120}
+{"id":98,"ts":1775774391059,"type":"Maya","from":"Maya","content":"FOLD\nI play cards, not hopes."}
+{"id":99,"ts":1775774391059,"type":"action","street":"Pre-flop","player":"Maya","action":"fold","amount":0,"talk":"I play cards, not hopes.","pot":160,"chips":970}
+{"id":100,"ts":1775774392134,"type":"Suki","from":"Suki","content":"CALL\nI came here to gamble not to make sense!"}
+{"id":101,"ts":1775774392134,"type":"action","street":"Pre-flop","player":"Suki","action":"call","amount":80,"talk":"I came here to gamble not to make sense!","pot":240,"chips":460}
+{"id":102,"ts":1775774393642,"type":"Rex","from":"Rex","content":"CALL\nKJ is worth seeing a flop."}
+{"id":103,"ts":1775774393642,"type":"action","street":"Pre-flop","player":"Rex","action":"call","amount":80,"talk":"KJ is worth seeing a flop.","pot":320,"chips":840}
+{"id":104,"ts":1775774393642,"type":"street","name":"Flop","community":"4♥ 7♠ A♦","pot":320}
+{"id":105,"ts":1775774395213,"type":"Vince","from":"Vince","content":"RAISE 180\nBottom pair and a dream — that's all I need to take your chips."}
+{"id":106,"ts":1775774395213,"type":"action","street":"Flop","player":"Vince","action":"raise","amount":180,"talk":"Bottom pair and a dream — that's all I need to take your chips.","pot":500,"chips":940}
+{"id":107,"ts":1775774396854,"type":"Suki","from":"Suki","content":"RAISE 460\nTWO PAIR BABY, the chaos gods have finally blessed their chaotic child!"}
+{"id":108,"ts":1775774396854,"type":"action","street":"Flop","player":"Suki","action":"raise","amount":460,"talk":"TWO PAIR BABY, the chaos gods have finally blessed their chaotic child!","pot":1140,"chips":-180}
+{"id":109,"ts":1775774397876,"type":"Rex","from":"Rex","content":"FOLD\nNothing hit, no reason to donate."}
+{"id":110,"ts":1775774397876,"type":"action","street":"Flop","player":"Rex","action":"fold","amount":0,"talk":"Nothing hit, no reason to donate.","pot":1140,"chips":840}
+{"id":111,"ts":1775774399518,"type":"Vince","from":"Vince","content":"FOLD\nSuki, you magnificent disaster — that one's yours."}
+{"id":112,"ts":1775774399518,"type":"action","street":"Flop","player":"Vince","action":"fold","amount":0,"talk":"Suki, you magnificent disaster — that one's yours.","pot":1140,"chips":940}
+{"id":113,"ts":1775774399519,"type":"hand_end","hand":5,"winner":"Suki","pot":1140,"method":"fold"}
+{"id":114,"ts":1775774399519,"type":"game_end","standings":[{"name":"Dutch","chips":1290},{"name":"Maya","chips":970},{"name":"Suki","chips":960},{"name":"Vince","chips":940},{"name":"Rex","chips":840}]}

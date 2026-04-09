@@ -1,0 +1,12 @@
+{
+  "name": "@agent-house/framework",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Reusable multi-agent framework — append-only conversations, multi-provider LLM, event bus, compaction",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./providers": "./providers/index.js"
+  },
+  "dependencies": {}
+}

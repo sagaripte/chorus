@@ -1,0 +1,110 @@
+{"id":1,"ts":1775774684971,"type":"game_start","players":["Vince","Maya","Dutch","Suki","Rex"],"chips":1000}
+{"id":2,"ts":1775774684972,"type":"hand_start","hand":1,"pot":30,"blinds":{"sb":"Maya","bb":"Dutch"}}
+{"id":3,"ts":1775774685707,"type":"Suki","from":"Suki","content":"RAISE 60\n\nKing high with chaos energy — let's make this interesting!"}
+{"id":4,"ts":1775774685708,"type":"action","street":"Pre-flop","player":"Suki","action":"raise","amount":60,"talk":"King high with chaos energy — let's make this interesting!","pot":110,"chips":920}
+{"id":5,"ts":1775774747577,"type":"game_start","players":["Vince","Maya","Dutch","Suki","Rex"],"chips":1000}
+{"id":6,"ts":1775774747578,"type":"hand_start","hand":1,"pot":30,"blinds":{"sb":"Maya","bb":"Dutch"}}
+{"id":7,"ts":1775774748334,"type":"Suki","from":"Suki","content":"CALL\n\nConnectors are fun, let's see a flop!"}
+{"id":8,"ts":1775774748334,"type":"action","street":"Pre-flop","player":"Suki","action":"call","amount":20,"talk":"Connectors are fun, let's see a flop!","pot":50,"chips":980}
+{"id":9,"ts":1775774748813,"type":"Rex","from":"Rex","content":"CALL\n\nSuki's chaos won't save those connectors."}
+{"id":10,"ts":1775774748813,"type":"action","street":"Pre-flop","player":"Rex","action":"call","amount":20,"talk":"Suki's chaos won't save those connectors.","pot":70,"chips":980}
+{"id":11,"ts":1775774750984,"type":"Vince","from":"Vince","content":"RAISE 60\nSuited and dangerous, just like me — buckle up, kids."}
+{"id":12,"ts":1775774750984,"type":"action","street":"Pre-flop","player":"Vince","action":"raise","amount":60,"talk":"Suited and dangerous, just like me — buckle up, kids.","pot":150,"chips":920}
+{"id":13,"ts":1775774752327,"type":"Maya","from":"Maya","content":"RAISE 200\nAQ suited energy doesn't need chaos — it just needs patience."}
+{"id":14,"ts":1775774752327,"type":"action","street":"Pre-flop","player":"Maya","action":"raise","amount":200,"talk":"AQ suited energy doesn't need chaos — it just needs patience.","pot":420,"chips":720}
+{"id":15,"ts":1775774756287,"type":"Dutch","from":"Dutch","content":"FOLD\nYour \"chaos\" looks expensive from here, Suki."}
+{"id":16,"ts":1775774756287,"type":"action","street":"Pre-flop","player":"Dutch","action":"fold","amount":0,"talk":"Your \"chaos\" looks expensive from here, Suki.","pot":420,"chips":980}
+{"id":17,"ts":1775774756910,"type":"Suki","from":"Suki","content":"FOLD\n\nNot chasing this one — too many sharks circling."}
+{"id":18,"ts":1775774756910,"type":"action","street":"Pre-flop","player":"Suki","action":"fold","amount":0,"talk":"Not chasing this one — too many sharks circling.","pot":420,"chips":980}
+{"id":19,"ts":1775774757267,"type":"Rex","from":"Rex","content":"FOLD\n\nPatience is a virtue, Maya."}
+{"id":20,"ts":1775774757267,"type":"action","street":"Pre-flop","player":"Rex","action":"fold","amount":0,"talk":"Patience is a virtue, Maya.","pot":420,"chips":980}
+{"id":21,"ts":1775774760211,"type":"Vince","from":"Vince","content":"FOLD\nEven I know when the heat's too much for suited rags — I'll be back to haunt you next hand."}
+{"id":22,"ts":1775774760211,"type":"action","street":"Pre-flop","player":"Vince","action":"fold","amount":0,"talk":"Even I know when the heat's too much for suited rags — I'll be back to haunt you next hand.","pot":420,"chips":920}
+{"id":23,"ts":1775774760212,"type":"hand_end","hand":1,"winner":"Maya","pot":420,"method":"fold"}
+{"id":24,"ts":1775774760213,"type":"hand_start","hand":2,"pot":30,"blinds":{"sb":"Dutch","bb":"Suki"}}
+{"id":25,"ts":1775774760690,"type":"Rex","from":"Rex","content":"FOLD\n\nA2 offsuit isn't worth the trouble."}
+{"id":26,"ts":1775774760690,"type":"action","street":"Pre-flop","player":"Rex","action":"fold","amount":0,"talk":"A2 offsuit isn't worth the trouble.","pot":30,"chips":980}
+{"id":27,"ts":1775774762740,"type":"Vince","from":"Vince","content":"RAISE 60\nYou don't need good cards when you've got good nerves — who wants to find out?"}
+{"id":28,"ts":1775774762749,"type":"action","street":"Pre-flop","player":"Vince","action":"raise","amount":60,"talk":"You don't need good cards when you've got good nerves — who wants to find out?","pot":110,"chips":840}
+{"id":29,"ts":1775774763982,"type":"Maya","from":"Maya","content":"FOLD\nNot every ace is worth the trouble."}
+{"id":30,"ts":1775774763982,"type":"action","street":"Pre-flop","player":"Maya","action":"fold","amount":0,"talk":"Not every ace is worth the trouble.","pot":110,"chips":1140}
+{"id":31,"ts":1775774767550,"type":"Dutch","from":"Dutch","content":"FOLD\nSave the nerves for a real hand, Vince."}
+{"id":32,"ts":1775774767550,"type":"action","street":"Pre-flop","player":"Dutch","action":"fold","amount":0,"talk":"Save the nerves for a real hand, Vince.","pot":110,"chips":970}
+{"id":33,"ts":1775774769704,"type":"Suki","from":"Suki","content":"RAISE 140\n\nKing with a wild kicker — let's stir the pot!"}
+{"id":34,"ts":1775774769704,"type":"action","street":"Pre-flop","player":"Suki","action":"raise","amount":140,"talk":"King with a wild kicker — let's stir the pot!","pot":310,"chips":760}
+{"id":35,"ts":1775774771786,"type":"Vince","from":"Vince","content":"FOLD\nAlright Suki, you can have this one — enjoy it while it lasts."}
+{"id":36,"ts":1775774771786,"type":"action","street":"Pre-flop","player":"Vince","action":"fold","amount":0,"talk":"Alright Suki, you can have this one — enjoy it while it lasts.","pot":310,"chips":840}
+{"id":37,"ts":1775774771787,"type":"hand_end","hand":2,"winner":"Suki","pot":310,"method":"fold"}
+{"id":38,"ts":1775774771788,"type":"hand_start","hand":3,"pot":30,"blinds":{"sb":"Suki","bb":"Rex"}}
+{"id":39,"ts":1775774774382,"type":"Vince","from":"Vince","content":"RAISE 80\nNow THIS is a hand — I've been waiting to punish someone, who's volunteering?"}
+{"id":40,"ts":1775774774382,"type":"action","street":"Pre-flop","player":"Vince","action":"raise","amount":80,"talk":"Now THIS is a hand — I've been waiting to punish someone, who's volunteering?","pot":130,"chips":740}
+{"id":41,"ts":1775774775599,"type":"Maya","from":"Maya","content":"FOLD\nGarbage in, garbage out."}
+{"id":42,"ts":1775774775599,"type":"action","street":"Pre-flop","player":"Maya","action":"fold","amount":0,"talk":"Garbage in, garbage out.","pot":130,"chips":1140}
+{"id":43,"ts":1775774777279,"type":"Dutch","from":"Dutch","content":"FOLD\nPunish someone else with that \"hand,\" Vince."}
+{"id":44,"ts":1775774777279,"type":"action","street":"Pre-flop","player":"Dutch","action":"fold","amount":0,"talk":"Punish someone else with that \"hand,\" Vince.","pot":130,"chips":970}
+{"id":45,"ts":1775774777952,"type":"Suki","from":"Suki","content":"RAISE 200\n\nPocket jacks deserve some chaos — let's see who's brave enough!"}
+{"id":46,"ts":1775774777952,"type":"action","street":"Pre-flop","player":"Suki","action":"raise","amount":200,"talk":"Pocket jacks deserve some chaos — let's see who's brave enough!","pot":420,"chips":770}
+{"id":47,"ts":1775774778407,"type":"Rex","from":"Rex","content":"FOLD\n\nNot volunteering for that punishment."}
+{"id":48,"ts":1775774778407,"type":"action","street":"Pre-flop","player":"Rex","action":"fold","amount":0,"talk":"Not volunteering for that punishment.","pot":420,"chips":960}
+{"id":49,"ts":1775774780763,"type":"Vince","from":"Vince","content":"CALL\nSuki thinks she's got pocket jacks? Honey, my ace says otherwise — let's dance."}
+{"id":50,"ts":1775774780763,"type":"action","street":"Pre-flop","player":"Vince","action":"call","amount":200,"talk":"Suki thinks she's got pocket jacks? Honey, my ace says otherwise — let's dance.","pot":620,"chips":540}
+{"id":51,"ts":1775774780764,"type":"street","name":"Flop","community":"8♥ 4♥ 10♥","pot":620}
+{"id":52,"ts":1775774781614,"type":"Suki","from":"Suki","content":"CHECK\n\nThree hearts on the board is scary — let's see what Vince does first."}
+{"id":53,"ts":1775774781614,"type":"action","street":"Flop","player":"Suki","action":"check","amount":0,"talk":"Three hearts on the board is scary — let's see what Vince does first.","pot":620,"chips":770}
+{"id":54,"ts":1775774784288,"type":"Vince","from":"Vince","content":"RAISE 200\nThree hearts and I've got the ace of hearts... oh wait, I don't — but Suki doesn't know that, does she?"}
+{"id":55,"ts":1775774784288,"type":"action","street":"Flop","player":"Vince","action":"raise","amount":200,"talk":"Three hearts and I've got the ace of hearts... oh wait, I don't — but Suki doesn't know that, does she?","pot":820,"chips":340}
+{"id":56,"ts":1775774785024,"type":"Suki","from":"Suki","content":"CALL\n\nLet's see if you're bluffing that flush, Vince!"}
+{"id":57,"ts":1775774785024,"type":"action","street":"Flop","player":"Suki","action":"call","amount":200,"talk":"Let's see if you're bluffing that flush, Vince!","pot":1020,"chips":570}
+{"id":58,"ts":1775774785024,"type":"street","name":"Turn","community":"8♥ 4♥ 10♥ 2♦","pot":1020}
+{"id":59,"ts":1775774785714,"type":"Suki","from":"Suki","content":"CHECK\n\nPaired the board, but those hearts are still lurking — let's see what Vince's got."}
+{"id":60,"ts":1775774785714,"type":"action","street":"Turn","player":"Suki","action":"check","amount":0,"talk":"Paired the board, but those hearts are still lurking — let's see what Vince's got.","pot":1020,"chips":570}
+{"id":61,"ts":1775774787668,"type":"Vince","from":"Vince","content":"CHECK\nYour move, Suki — I'm giving you enough rope to hang yourself."}
+{"id":62,"ts":1775774787668,"type":"action","street":"Turn","player":"Vince","action":"check","amount":0,"talk":"Your move, Suki — I'm giving you enough rope to hang yourself.","pot":1020,"chips":340}
+{"id":63,"ts":1775774787669,"type":"street","name":"River","community":"8♥ 4♥ 10♥ 2♦ 5♠","pot":1020}
+{"id":64,"ts":1775774788319,"type":"Suki","from":"Suki","content":"CHECK\n\nNo flush came through — let's see if Vince actually has something."}
+{"id":65,"ts":1775774788319,"type":"action","street":"River","player":"Suki","action":"check","amount":0,"talk":"No flush came through — let's see if Vince actually has something.","pot":1020,"chips":570}
+{"id":66,"ts":1775774791802,"type":"Vince","from":"Vince","content":"RAISE 340\nAll in, baby — you said you wanted to see if I had something, so put your chips where your mouth is!"}
+{"id":67,"ts":1775774791802,"type":"action","street":"River","player":"Vince","action":"raise","amount":340,"talk":"All in, baby — you said you wanted to see if I had something, so put your chips where your mouth is!","pot":1360,"chips":0}
+{"id":68,"ts":1775774792333,"type":"Suki","from":"Suki","content":"CALL\n\nLet's find out if that bluff worked, Vince!"}
+{"id":69,"ts":1775774792333,"type":"action","street":"River","player":"Suki","action":"call","amount":340,"talk":"Let's find out if that bluff worked, Vince!","pot":1700,"chips":230}
+{"id":70,"ts":1775774792988,"type":"Suki","from":"Suki","content":"CHECK\n\nI'm all in already — let's see what you've got!"}
+{"id":71,"ts":1775774792988,"type":"action","street":"River","player":"Suki","action":"check","amount":0,"talk":"I'm all in already — let's see what you've got!","pot":1700,"chips":230}
+{"id":72,"ts":1775774792988,"type":"hand_end","hand":3,"winner":"Suki","pot":1700,"method":"showdown","hands":[{"player":"Suki","hand":"J♣ J♠","score":109},{"player":"Vince","hand":"J♥ A♠","score":12}]}
+{"id":73,"ts":1775774792990,"type":"hand_start","hand":4,"pot":30,"blinds":{"sb":"Maya","bb":"Dutch"}}
+{"id":74,"ts":1775774793695,"type":"Suki","from":"Suki","content":"RAISE 80\n\nKing-ten suited energy — let's build this pot!"}
+{"id":75,"ts":1775774793695,"type":"action","street":"Pre-flop","player":"Suki","action":"raise","amount":80,"talk":"King-ten suited energy — let's build this pot!","pot":130,"chips":1830}
+{"id":76,"ts":1775774794141,"type":"Rex","from":"Rex","content":"CALL\n\nLet's see if your king-ten can survive the set mine."}
+{"id":77,"ts":1775774794141,"type":"action","street":"Pre-flop","player":"Rex","action":"call","amount":100,"talk":"Let's see if your king-ten can survive the set mine.","pot":230,"chips":860}
+{"id":78,"ts":1775774795823,"type":"Maya","from":"Maya","content":"FOLD\nA8 offsuit isn't worth tangling with a maniac's stack."}
+{"id":79,"ts":1775774795823,"type":"action","street":"Pre-flop","player":"Maya","action":"fold","amount":0,"talk":"A8 offsuit isn't worth tangling with a maniac's stack.","pot":230,"chips":1130}
+{"id":80,"ts":1775774797855,"type":"Dutch","from":"Dutch","content":"FOLD\nKing-ten suited isn't the flex you think it is, Suki."}
+{"id":81,"ts":1775774797855,"type":"action","street":"Pre-flop","player":"Dutch","action":"fold","amount":0,"talk":"King-ten suited isn't the flex you think it is, Suki.","pot":230,"chips":950}
+{"id":82,"ts":1775774797856,"type":"street","name":"Flop","community":"Q♦ 10♣ 7♣","pot":230}
+{"id":83,"ts":1775774798594,"type":"Suki","from":"Suki","content":"RAISE 140\n\nPair of tens and a gutshot straight draw — let's see who's serious!"}
+{"id":84,"ts":1775774798594,"type":"action","street":"Flop","player":"Suki","action":"raise","amount":140,"talk":"Pair of tens and a gutshot straight draw — let's see who's serious!","pot":370,"chips":1690}
+{"id":85,"ts":1775774799090,"type":"Rex","from":"Rex","content":"RAISE 400\n\nYour \"gutshot\" is about to need a bigger draw."}
+{"id":86,"ts":1775774799090,"type":"action","street":"Flop","player":"Rex","action":"raise","amount":400,"talk":"Your \"gutshot\" is about to need a bigger draw.","pot":910,"chips":320}
+{"id":87,"ts":1775774799797,"type":"Suki","from":"Suki","content":"CALL\n\nI like my pair — let's run it out!"}
+{"id":88,"ts":1775774799797,"type":"action","street":"Flop","player":"Suki","action":"call","amount":400,"talk":"I like my pair — let's run it out!","pot":1310,"chips":1290}
+{"id":89,"ts":1775774799797,"type":"street","name":"Turn","community":"Q♦ 10♣ 7♣ 5♥","pot":1310}
+{"id":90,"ts":1775774800525,"type":"Suki","from":"Suki","content":"CHECK\n\nLet Rex make the move — I've got a pair and I'm curious."}
+{"id":91,"ts":1775774800525,"type":"action","street":"Turn","player":"Suki","action":"check","amount":0,"talk":"Let Rex make the move — I've got a pair and I'm curious.","pot":1310,"chips":1290}
+{"id":92,"ts":1775774801138,"type":"Rex","from":"Rex","content":"CHECK\n\nCuriosity killed the cat, Suki."}
+{"id":93,"ts":1775774801139,"type":"action","street":"Turn","player":"Rex","action":"check","amount":0,"talk":"Curiosity killed the cat, Suki.","pot":1310,"chips":320}
+{"id":94,"ts":1775774801139,"type":"street","name":"River","community":"Q♦ 10♣ 7♣ 5♥ A♥","pot":1310}
+{"id":95,"ts":1775774801923,"type":"Suki","from":"Suki","content":"CHECK\n\nAce on the river is sketchy — let's see if Rex has it."}
+{"id":96,"ts":1775774801923,"type":"action","street":"River","player":"Suki","action":"check","amount":0,"talk":"Ace on the river is sketchy — let's see if Rex has it.","pot":1310,"chips":1290}
+{"id":97,"ts":1775774802283,"type":"Rex","from":"Rex","content":"CHECK\n\nAce didn't save you this time."}
+{"id":98,"ts":1775774802283,"type":"action","street":"River","player":"Rex","action":"check","amount":0,"talk":"Ace didn't save you this time.","pot":1310,"chips":320}
+{"id":99,"ts":1775774802284,"type":"hand_end","hand":4,"winner":"Rex","pot":1310,"method":"showdown","hands":[{"player":"Rex","hand":"7♠ 7♥","score":312},{"player":"Suki","hand":"10♠ K♥","score":112}]}
+{"id":100,"ts":1775774802285,"type":"hand_start","hand":5,"pot":30,"blinds":{"sb":"Dutch","bb":"Suki"}}
+{"id":101,"ts":1775774802675,"type":"Rex","from":"Rex","content":"FOLD\n\nNot chasing with junk today."}
+{"id":102,"ts":1775774802676,"type":"action","street":"Pre-flop","player":"Rex","action":"fold","amount":0,"talk":"Not chasing with junk today.","pot":30,"chips":1630}
+{"id":103,"ts":1775774803490,"type":"Maya","from":"Maya","content":"FOLD\nSuited doesn't save a bad hand."}
+{"id":104,"ts":1775774803490,"type":"action","street":"Pre-flop","player":"Maya","action":"fold","amount":0,"talk":"Suited doesn't save a bad hand.","pot":30,"chips":1130}
+{"id":105,"ts":1775774806783,"type":"Dutch","from":"Dutch","content":"CALL\nQueen-ten has more upside than your \"not junk\" Rex."}
+{"id":106,"ts":1775774806783,"type":"action","street":"Pre-flop","player":"Dutch","action":"call","amount":10,"talk":"Queen-ten has more upside than your \"not junk\" Rex.","pot":40,"chips":930}
+{"id":107,"ts":1775774807818,"type":"Suki","from":"Suki","content":"FOLD\n\nFive-nine offsuit is garbage — not even chaos can save this one."}
+{"id":108,"ts":1775774807818,"type":"action","street":"Pre-flop","player":"Suki","action":"fold","amount":0,"talk":"Five-nine offsuit is garbage — not even chaos can save this one.","pot":40,"chips":1270}
+{"id":109,"ts":1775774807818,"type":"hand_end","hand":5,"winner":"Dutch","pot":40,"method":"fold"}
+{"id":110,"ts":1775774807818,"type":"game_end","standings":[{"name":"Rex","chips":1630},{"name":"Suki","chips":1270},{"name":"Maya","chips":1130},{"name":"Dutch","chips":970},{"name":"Vince","chips":0}]}

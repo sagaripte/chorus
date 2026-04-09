@@ -1,0 +1,11 @@
+{
+  "hand": 5,
+  "chips": {
+    "Vince": 940,
+    "Maya": 970,
+    "Dutch": 1290,
+    "Suki": 960,
+    "Rex": 840
+  },
+  "eliminated": []
+}

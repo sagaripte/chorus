@@ -58,7 +58,7 @@ Three agents, three different LLMs, real debate. Timeline logs every response au
 ### Examples
 
 - **[examples/debate/](examples/debate/)** — 3 agents argue a topic and vote on the winner (~100 lines)
-- **[examples/poker/](examples/poker/)** — 5 agents play Texas Hold'em with private hands, bluffing, and table talk. Shows private state, `ask()`, Bus for public chat, and the separation of LLM decisions from procedural game rules. [Read the transcript →](examples/poker/data/poker.md)
+- **[examples/poker/](examples/poker/)** — 5 agents play Texas Hold'em with private hands, bluffing, and table talk. Shows private state, `ask()`, Bus for public chat, and the separation of LLM decisions from procedural game rules. [Read the transcript →](examples/poker/mix/poker.md)
 
 ---
 

@@ -53,6 +53,7 @@ const PROVIDER_CLASSES = {
   xai: () => import('./xai.js').then(m => m.XAIProvider),
   anthropic: () => import('./anthropic.js').then(m => m.AnthropicProvider),
   openai: () => import('./openai.js').then(m => m.OpenAIProvider),
+  gemini: () => import('./openai.js').then(m => m.OpenAIProvider),  // OpenAI-compatible
 };
 
 export async function loadProviders(config) {

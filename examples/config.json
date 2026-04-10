@@ -1,0 +1,37 @@
+{
+    "providers": {
+    "xai": {
+      "base_url": "https://api.x.ai/v1",
+      "models": {
+        "grok": "grok-4.20-0309-non-reasoning",
+        "grok-reason": "grok-4.20-0309-reasoning"
+      },
+      "enabled": ["grok", "grok-reason"]
+    },
+    "anthropic": {
+      "base_url": "https://api.anthropic.com",
+      "models": {
+        "opus": "claude-opus-4-6",
+        "sonnet": "claude-sonnet-4-6",
+        "haiku": "claude-haiku-4-5"
+      },
+      "enabled": ["opus" ,"sonnet", "haiku"]
+    },
+    "openai": {
+      "base_url": "https://api.openai.com/v1",
+      "models": {
+        "gpt-4.1": "gpt-4.1",
+        "gpt-4.1-mini": "gpt-4.1-mini"
+      },
+      "enabled": []
+    },
+    "gemini": {
+      "base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+      "models": {
+        "flash-2": "gemini-2.5-flash",
+        "flash-3": "gemini-3.1-flash-lite-preview"
+      },
+      "enabled": ["flash-2", "flash-3"]
+    }
+  }
+}

@@ -107,6 +107,15 @@ export class Agent {
       responseFormat: opts.responseFormat,
     };
 
+    // Governance gate — throw to block, return modified context to alter
+    await this.#runHooks('governance', {
+      agent: this.id,
+      model: modelId,
+      messages,
+      opts: sendOpts,
+      usage: this.totalUsage,
+    });
+
     const t0 = Date.now();
     let result;
     try {

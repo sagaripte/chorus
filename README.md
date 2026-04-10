@@ -59,6 +59,7 @@ Three agents, three different LLMs, real debate. Timeline logs every response au
 
 - **[examples/debate/](examples/debate/)** — 3 agents argue a topic and vote on the winner (~100 lines)
 - **[examples/poker/](examples/poker/)** — 5 agents play Texas Hold'em with private hands, bluffing, and table talk. Shows private state, `ask()`, Bus for public chat, and the separation of LLM decisions from procedural game rules. [Read the transcript →](examples/poker/mix/poker.md)
+- **[examples/jury/](examples/jury/)** — 12 Angry Men. 12 juror agents deliberate a murder verdict. Secret ballots, public arguments, opinion tracking across rounds. Shows large agent groups with natural convergence.
 
 ---
 
@@ -155,6 +156,7 @@ await agent.compact(
 | `onError` | Provider throws | `Error` | Fallback string, or rethrow |
 | `beforeQueue` | Every `queue()` call | `content` | Modified content, or `null` to suppress |
 | `afterCompact` | After compaction | `summary` | (informational) |
+| `governance` | Before LLM call (after `beforeSend`) | `{ agent, model, messages, opts, usage }` | Throw to block. |
 
 ```js
 // Inject compliance reminder before every LLM call
@@ -162,6 +164,11 @@ agent.hook('beforeSend', (msgs) => [...msgs, { role: 'user', content: '[Remember
 
 // Track token spend per agent
 agent.hook('afterSend', (text) => { logCost(agent.id, agent.totalUsage); return text; });
+
+// Block calls that exceed a budget
+agent.hook('governance', (ctx) => {
+  if (ctx.usage.input + ctx.usage.output > 1_000_000) throw new Error('Token budget exceeded');
+});
 ```
 
 **Full API:**
@@ -184,6 +191,28 @@ Agent
 ├── opts.store              custom Store backend
 └── opts.model              model alias from registry
 ```
+
+### Governance
+
+Budget caps, rate limits, content filters, and audit logging — applied across all agents at once. Built on hooks, not a separate system.
+
+```js
+import { Governance, Timeline } from './index.js';
+
+const gov = new Governance({ audit: new Timeline('data/audit.jsonl') });
+
+gov.budget({ maxCostUsd: 5, costPerInputToken: 0.003/1000, costPerOutputToken: 0.015/1000 });
+gov.rateLimit({ maxCallsPerMinute: 20 });
+gov.filter((content, agent) => {
+  if (content.includes('CONFIDENTIAL')) return null;  // block
+  return content.replace(/\b\d{3}-\d{2}-\d{4}\b/g, '[SSN REDACTED]');  // redact
+});
+
+// Apply to all agents — one line
+gov.apply(bull, bear, pm, compliance);
+```
+
+Every enforcement action is logged to the audit timeline. Write custom policies with `gov.policy(hookName, fn)` for anything the built-ins don't cover.
 
 ### Bus
 

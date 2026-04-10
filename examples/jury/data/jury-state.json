@@ -1,0 +1,17 @@
+{
+  "round": 12,
+  "votes": {
+    "1": "NOT GUILTY",
+    "2": "NOT GUILTY",
+    "3": "GUILTY",
+    "4": "NOT GUILTY",
+    "5": "NOT GUILTY",
+    "6": "NOT GUILTY",
+    "7": "GUILTY",
+    "8": "NOT GUILTY",
+    "9": "NOT GUILTY",
+    "10": "NOT GUILTY",
+    "11": "NOT GUILTY",
+    "12": "GUILTY"
+  }
+}

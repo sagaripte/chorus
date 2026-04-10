@@ -9,38 +9,13 @@
  *   - Timeline event logging
  *   - Provider-agnostic model selection
  */
-import { Agent, Bus, Timeline, loadProviders } from '../../index.js';
+import { Agent } from '../../index.js';
+import { setup } from '../runner.js';
 
 // ─── Config ──────────────────────────────────────────────────────────────────
 
 const topic = process.argv[2] || 'Is social media making us smarter or dumber?';
 const ROUNDS = 3;
-const MODEL = process.env.MODEL || 'gpt-4.1-mini'; // or 'sonnet', 'grok', etc.
-const DATA_DIR = './data';
-
-const providers = {};
-if (process.env.OPENAI_API_KEY) {
-  providers.openai = {
-    apiKey: process.env.OPENAI_API_KEY,
-    models: { 'gpt-4.1-mini': 'gpt-4.1-mini', 'gpt-4.1': 'gpt-4.1' },
-    enabled: ['gpt-4.1-mini', 'gpt-4.1'],
-  };
-}
-if (process.env.ANTHROPIC_API_KEY) {
-  providers.anthropic = {
-    apiKey: process.env.ANTHROPIC_API_KEY,
-    models: { sonnet: 'claude-sonnet-4-6', haiku: 'claude-haiku-4-5' },
-    enabled: ['sonnet', 'haiku'],
-  };
-}
-if (process.env.XAI_API_KEY) {
-  providers.xai = {
-    apiKey: process.env.XAI_API_KEY,
-    baseUrl: 'https://api.x.ai/v1',
-    models: { grok: 'grok-4.20-0309-non-reasoning' },
-    enabled: ['grok'],
-  };
-}
 
 // ─── Debater Agent ───────────────────────────────────────────────────────────
 
@@ -76,11 +51,11 @@ class Debater extends Agent {
 // ─── Main ────────────────────────────────────────────────────────────────────
 
 async function main() {
-  await loadProviders(providers);
-
-  const bus = new Bus();
-  const timeline = new Timeline(`${DATA_DIR}/debate.jsonl`);
-  const opts = { model: MODEL, dataDir: DATA_DIR, maxTokens: 300, temperature: 0.8 };
+  const { bus, tl: timeline, model } = await setup({
+    name: 'debate',
+    defaultModel: 'sonnet',
+  });
+  const opts = { model, dataDir: './data', maxTokens: 300, temperature: 0.8 };
 
   // Create 3 debaters with different positions
   const debaters = [
@@ -147,8 +122,8 @@ async function main() {
 
   timeline.emit('debate_end', { votes, tally, winner: winner?.[0] });
 
-  console.log(`  Timeline saved to ${DATA_DIR}/debate.jsonl`);
-  console.log(`  Agent histories in ${DATA_DIR}/*.jsonl\n`);
+  console.log(`  Timeline saved to ./data/debate.jsonl`);
+  console.log(`  Agent histories in ./data/*.jsonl\n`);
 }
 
 main().catch(err => {

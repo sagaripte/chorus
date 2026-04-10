@@ -125,10 +125,24 @@ Hooks handle **cross-cutting concerns** that apply to all agents:
 - Rate-limit retry logic
 - Cost tracking
 - Input/output filtering
+- Governance — budget enforcement, access control, audit logging
 
 These concerns shouldn't be duplicated in every `onMessage()` implementation. Hooks keep them orthogonal and reusable.
 
-Supported hooks: `beforeSend`, `afterSend`, `onError`, `beforeQueue`, `afterCompact`.
+Supported hooks: `beforeSend`, `afterSend`, `onError`, `beforeQueue`, `afterCompact`, `governance`.
+
+### Why a `governance` hook?
+
+Enterprise teams need budget caps, content policies, rate limits, access control, and audit trails — but the right implementation depends entirely on their stack (Postgres, Redis, RBAC system, etc.). The `governance` hook fires after `beforeSend` builds the final message array and before the LLM call. It receives full context:
+
+```js
+agent.hook('governance', ({ agent, model, messages, opts, usage }) => {
+  if (usage.input + usage.output > 1_000_000) throw new Error('Token budget exceeded');
+  auditLog.write({ agent, model, messageCount: messages.length, ts: Date.now() });
+});
+```
+
+Throw to block the call. The framework catches it through the normal error path — `onError` hooks can provide a fallback response, or the error propagates to the caller. Nothing is implemented by default — the hook is just a well-placed gate for teams that need it.
 
 ---
 

@@ -7,6 +7,9 @@
  *   Timeline — append-only event log (JSONL)
  *   Session  — state persistence + audit log
  *
+ * Governance:
+ *   Governance — policy enforcement (budget, rate limit, content filter)
+ *
  * Persistence:
  *   Store     — abstract persistence interface
  *   FileStore — default file-backed implementation (JSONL on disk)
@@ -32,4 +35,5 @@ export { Bus } from './bus.js';
 export { Timeline } from './timeline.js';
 export { Session } from './session.js';
 export { Store, FileStore } from './store.js';
+export { Governance } from './governance.js';
 export { registry, loadProviders } from './providers/index.js';

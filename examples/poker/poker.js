@@ -11,48 +11,15 @@
  *   - ask() for one-shot decisions
  *   - Agent subclassing with personality
  */
-import { Bus, Timeline, Session, loadProviders } from '../../index.js';
 import PokerPlayer from './player.js';
 import Table from './table.js';
+import { setup } from '../runner.js';
 
 // ─── Config ──────────────────────────────────────────────────────────────────
 
-const ARG = process.argv[2] || 'gpt-4.1-mini';  // model alias or 'mixed'
-const DATA_DIR = './data';
 const STARTING_CHIPS = 1000;
 const SMALL_BLIND = 10;
 const HANDS_TO_PLAY = 5;
-
-const providers = {};
-if (process.env.OPENAI_API_KEY) {
-  providers.openai = {
-    apiKey: process.env.OPENAI_API_KEY,
-    models: { 'gpt-4.1-mini': 'gpt-4.1-mini', 'gpt-4.1': 'gpt-4.1' },
-    enabled: ['gpt-4.1-mini', 'gpt-4.1'],
-  };
-}
-if (process.env.ANTHROPIC_API_KEY) {
-  providers.anthropic = {
-    apiKey: process.env.ANTHROPIC_API_KEY,
-    models: {
-      opus: 'claude-opus-4-6',
-      sonnet: 'claude-sonnet-4-6',
-      haiku: 'claude-haiku-4-5',
-    },
-    enabled: ['opus', 'sonnet', 'haiku'],
-  };
-}
-if (process.env.XAI_API_KEY) {
-  providers.xai = {
-    apiKey: process.env.XAI_API_KEY,
-    baseUrl: 'https://api.x.ai/v1',
-    models: {
-      'grok-reason': 'grok-4.20-0309-reasoning',
-      'grok-fast': 'grok-4.20-0309-non-reasoning',
-    },
-    enabled: ['grok-reason', 'grok-fast'],
-  };
-}
 
 // Mixed mode: each player gets a different model
 const MIXED_MODELS = {
@@ -66,13 +33,11 @@ const MIXED_MODELS = {
 // ─── Main ────────────────────────────────────────────────────────────────────
 
 async function main() {
-  await loadProviders(providers);
-
-  const bus = new Bus();
-  const tl = new Timeline(`${DATA_DIR}/poker.jsonl`);
-  const session = new Session(`${DATA_DIR}/poker-state.json`);
-  const baseOpts = { dataDir: DATA_DIR, maxTokens: 150, temperature: 0.9, timeline: tl, startingChips: STARTING_CHIPS };
-  const mixed = ARG === 'mixed';
+  const { bus, tl, session, model, mixed } = await setup({
+    name: 'poker',
+    defaultModel: 'gpt-4.1-mini',
+  });
+  const baseOpts = { dataDir: './data', maxTokens: 150, temperature: 0.9, timeline: tl, startingChips: STARTING_CHIPS };
 
   const playerDefs = [
     ['Vince', 'Aggressive and unpredictable. You raise often and love to bluff. Talk trash.'],
@@ -83,14 +48,14 @@ async function main() {
   ];
 
   const players = playerDefs.map(([name, style]) => {
-    const model = mixed ? MIXED_MODELS[name] : ARG;
-    return new PokerPlayer(name, style, { ...baseOpts, model });
+    const playerModel = mixed ? MIXED_MODELS[name] : model;
+    return new PokerPlayer(name, style, { ...baseOpts, model: playerModel });
   });
 
   if (mixed) {
     console.log(`  Models: ${playerDefs.map(([n]) => `${n}→${MIXED_MODELS[n]}`).join(', ')}\n`);
   } else {
-    console.log(`  Model: ${ARG}\n`);
+    console.log(`  Model: ${model}\n`);
   }
 
   // Table talk: when someone speaks, everyone hears
@@ -138,8 +103,8 @@ async function main() {
   console.log(`${'═'.repeat(60)}\n`);
 
   tl.emit('game_end', { standings: sorted.map(p => ({ name: p.playerName, chips: p.chips })) });
-  console.log(`  Timeline: ${DATA_DIR}/poker.jsonl`);
-  console.log(`  State: ${DATA_DIR}/poker-state.json\n`);
+  console.log(`  Timeline: ./data/poker.jsonl`);
+  console.log(`  State: ./data/poker-state.json\n`);
 }
 
 main().catch(err => {

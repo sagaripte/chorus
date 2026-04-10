@@ -2,28 +2,17 @@
 
 Build multi-agent LLM systems on your existing stack — or no stack at all.
 
-Four primitives. Zero dependencies. Plug into Postgres, Kafka, Datadog, Airflow — or just use the filesystem. Chorus gives you the thinnest possible layer between LLM APIs and agents that collaborate, and gets out of the way.
+Chorus gives you the thinnest possible layer between LLM APIs and agents that collaborate. Plug into Postgres, Kafka, Datadog, Airflow — or just use the filesystem.
 
-```
-Your Application (engine, rules, turns)
-    │          │          │          │
- Agent      Bus      Timeline   Session
- (JSONL)  (pub/sub)  (event log) (state)
-    │
- Registry ─── xAI / Anthropic / OpenAI / Ollama / ...
-```
-
-- Zero dependencies — just native Node.js
+- Zero dependencies — just vanilla js.
 - Mix models from different providers in the same system
-- File-first persistence (JSONL) — inspect with `cat`, resume instantly
-- Bring your own backend via a 5-method `Store` interface
+- File-first persistence (JSONL) 
+- Bring your own backend via `Store` interface
 - Full conversation history with intelligent compaction
 - Pub/sub messaging + immutable event timeline
 - Hooks for observability, compliance, cost tracking
 - Append-only everywhere — nothing is ever silently lost
 - Parallel by default — each agent owns its state, run N concurrently
-
-**Who it's for:** AI researchers studying emergent behavior. Fintech teams building analyst simulations. Game developers building NPC social systems. Companies running multi-agent testing. Anyone curious about what happens when you put 6 LLMs in a room together.
 
 ---
 

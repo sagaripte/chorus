@@ -1,10 +1,10 @@
 {
-  "day": 3,
-  "totalRevenue": 150,
+  "day": 5,
+  "totalRevenue": 218.25,
   "supplies": {
-    "lemons": 24,
-    "sugar": 12,
-    "cups": 0
+    "lemons": 115,
+    "sugar": 56,
+    "cups": 83
   },
   "goal": 100
 }

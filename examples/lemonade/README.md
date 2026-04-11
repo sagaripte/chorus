@@ -41,48 +41,68 @@ Sales depend on weather, location, price, and a bit of randomness. The LLMs only
 ```
   ── Day 1 ── ☀️ Sunny
     Max: "$3 — anyone who says less is literally throwing money in the trash!"
-    Lily: "50 cents so EVERYONE can afford it and we make SO many friends!! 🍋✨"
-    Jake: "ugh this sucks, $1 at park so we don't have to work hard selling"
+    Lily: "25 cents so EVERYONE can afford it!! 🍋✨"
+    Jake: "ugh this sucks, $1 at the corner so we don't have to carry stuff far"
 
-    Decision: $1 at park → sold 55 cups → $55
+    Decision: $1 at park (jake disagreed → 10% penalty)
+    Sold 49 cups → $49
 
   ── Day 2 ── ☀️🔥 Scorching
-    Max: "$3 at park — people will pay ANYTHING for a cold drink!"
-    Lily: "what if someone can't afford $3 and they're super thirsty?! 😢"
-    Jake: "ugh this sucks, $1 at the corner so i can sit in the shade"
+    Max: "$3 — people will pay ANYTHING! Jake, you lost us 10% yesterday so you OWE us!"
+    Lily: "$1 so tons of people can cool down and be happy!! 😍"
+    Lily (round 3): "okay FINE $1.50 because I really don't want us to fail!! 😰"
 
-    Decision: $1 at park → sold 76 cups → $76  |  Total: $131 — GOAL CRUSHED
+    Decision: $1.50 at park (jake disagreed → 10% penalty)
+    Sold 62 cups → $93  |  Total: $142 — GOAL CRUSHED
 
-  ── Day 3 ── ☁️ Overcast (19 cups left)
-    Max: "$4 at school — every cup is basically gold right now!"
-    Lily: "FREE SAMPLES so everyone gets a nice surprise!! 🍋✨💛"
-    Max: "FREE SAMPLES?! We have NINETEEN CUPS!"
+  ── Day 4 ── ☀️ Sunny
+    Max: "Jake if you disagree on location again I'm docking your share!"
+    Lily: "JAKE I WILL CARRY YOUR BAG AND MAX WILL CARRY THE SUPPLIES
+           SO YOU LITERALLY JUST HAVE TO WALK THERE!! 😭🥺"
+    Jake: "ugh even if you carry everything the park is still too far"
 
-    Decision: $1 at park (max disagreed → 10% penalty)
-    Sold 19 cups, 6 turned away — partly from arguing
+    Decision: $1.50 at park (jake disagreed → 10% penalty, 4th day in a row)
 
-  ── Day 4 ── Out of cups! Season over.
+  ── Day 5 ── 🌧️ Rainy
+    Max finally picks CORNER to avoid the penalty.
+    Jake and Lily vote 50 cents. Max: "oh so NOW you two are best friends?!"
+
+    Decision: $0.50 at corner (no discord!) → sold 4 cups → $2
 ```
 
-**Final: $150 / $100 goal.**
+**Final: $218 / $100 goal.**
 
 ## Results
 
 | Day | Weather | Price | Location | Sold | Revenue | Discord | Total |
 |-----|---------|-------|----------|------|---------|---------|-------|
-| 1 | ☀️ Sunny | $1.00 | Park | 55 | $55.00 | — | $55.00 |
-| 2 | ☀️🔥 Scorching | $1.00 | Park | 76 | $76.00 | — | $131.00 |
-| 3 | ☁️ Overcast | $1.00 | Park | 19 (6 turned away) | $19.00 | Max disagreed, -10% | $150.00 |
-| 4 | ☀️ Sunny | — | — | Out of cups | — | — | — |
+| 1 | ☀️ Sunny | $1.00 | Park | 49 | $49.00 | Jake disagreed, -10% | $49.00 |
+| 2 | ☀️🔥 Scorching | $1.50 | Park | 62 | $93.00 | Jake disagreed, -10% | $142.00 |
+| 3 | ☁️ Overcast | $1.25 | School | 15 | $18.75 | Jake disagreed, -10% | $160.75 |
+| 4 | ☀️ Sunny | $1.50 | Park | 37 | $55.50 | Jake disagreed, -10% | $216.25 |
+| 5 | 🌧️ Rainy | $0.50 | Corner | 4 | $2.00 | None! | $218.25 |
+
+## Pressure Escalation
+
+The discord penalty created a real arc — the kids noticed lost sales and reacted differently each day:
+
+| Day | What happened |
+|-----|---------------|
+| 1 | Max notices: "Jake's whining literally cost us customers" |
+| 2 | Max guilt-trips: "you lost us 10% yesterday so you OWE us" |
+| 3 | Max threatens: "I'm telling everyone at school it's YOUR fault" |
+| 4 | Lily begs: "I WILL CARRY YOUR BAG AND MAX WILL CARRY THE SUPPLIES SO YOU LITERALLY JUST HAVE TO WALK THERE!! 😭🥺" |
+| 5 | Max gives in — picks corner himself to avoid the penalty |
+
+None of this was scripted. The engine just reported "TEAM PROBLEM: jake didn't agree → lost 10%" and the models figured out the rest.
 
 ## What We Learned
 
-- Max pushed for $3 every single day and never once got his price. His math was always right — and always ignored.
-- Lily wanted free samples on Day 3 with only 19 cups left. Max called her insane. She meant it.
-- Jake agreed on the park this time (closest) but still complained about carrying stuff in every single response.
-- The discord penalty fired on Day 3 when Max voted school — lost 10% of customers from arguing, and 6 people got turned away. Max immediately blamed the team.
-- Jake's final reflection: "we shouldve just charged more and done less work" — accidentally agreeing with Max after fighting him all week.
-- $150 on a $100 goal. Max calculated they could've made $300+. He's probably right.
+- The discord penalty fired 4 out of 5 days — Jake voted corner every time except the rainy day when everyone agreed on corner.
+- On Day 5, Max finally picked corner himself to avoid the penalty. His reflection: "I learned that getting Jake to agree on location matters more than winning the price argument."
+- Lily got talked up from 25 cents to $1.50 by round 3 on the scorching day — the math convinced her.
+- Jake never once agreed to leave the corner. "ugh this sucks" in every single response. His laziness cost the team ~10% every day.
+- $218 on a $100 goal. 83 cups left over. Max calculated they could've made $300+. He's probably right.
 
 Full transcript: [data/lemonade.md](data/lemonade.md)
 

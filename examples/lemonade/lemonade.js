@@ -21,7 +21,7 @@ import { getWeather, getWeatherInfo, getLocationNames, simulateSales } from './m
 
 const DAYS = 5;
 const GOAL = 100;
-const STARTING_SUPPLIES = { lemons: 100, sugar: 50, cups: 150 };
+const STARTING_SUPPLIES = { lemons: 200, sugar: 100, cups: 250 };
 
 const MIXED_MODELS = { Max: 'opus', Lily: 'sonnet', Jake: 'grok' };
 const KIDS = [

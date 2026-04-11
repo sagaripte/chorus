@@ -1,0 +1,10 @@
+{
+  "day": 3,
+  "totalRevenue": 150,
+  "supplies": {
+    "lemons": 24,
+    "sugar": 12,
+    "cups": 0
+  },
+  "goal": 100
+}

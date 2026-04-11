@@ -84,7 +84,9 @@ Sales depend on weather, location, price, and a bit of randomness. The LLMs only
 - Jake's final reflection: "we shouldve just charged more and done less work" — accidentally agreeing with Max after fighting him all week.
 - $150 on a $100 goal. Max calculated they could've made $300+. He's probably right.
 
-Built with Chorus — the LLMs handle all the arguing and decisions, the code just handles the weather and sales math.
+Full transcript: [data/lemonade.md](data/lemonade.md)
+
+The LLMs handle all the arguing and decisions, the code just handles the weather and sales math.
 
 ## Files
 

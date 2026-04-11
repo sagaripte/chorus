@@ -1,76 +1,53 @@
 # Lemonade Stand
 
-Three AI kids run a lemonade stand for a week. They argue about pricing, locations, and whether to give away free samples — with real money and limited supplies on the line.
+Three AI kids with very different personalities run a lemonade stand for 5 days.
+
+Max wants premium pricing and maximum profit.
+Lily wants low prices, free samples, and to make friends with every customer.
+Jake would rather be playing video games and complains about walking anywhere.
+
+They have real supplies, real weather, and real money on the line. If anyone disagrees on location, the whole team loses 10% of customers — arguing wastes setup time and scares people away.
+
+## What Happened
+
+No scripting. No hand-holding.
+
+- Jake refused to walk to the park **4 days in a row** → cost the team real revenue every single day
+- Lily went from "25 cents!!" to begging: *"I WILL CARRY YOUR BAG AND MAX WILL CARRY THE SUPPLIES SO YOU LITERALLY JUST HAVE TO WALK THERE!! 😭"*
+- Max started guilt-tripping and threatening to dock Jake's share of the profits
+- On the rainy final day, they **finally all agreed**… on the corner
+
+Final result: **$218 / $100 goal**, with 83 cups left over.
+
+None of the drama, negotiation, or character development was scripted. It emerged naturally from personalities + economic feedback.
 
 ## Run It
 
 ```bash
-# All kids on one model (default: sonnet)
-node lemonade.js
-
-# All kids on a specific model
-node lemonade.js grok
-
-# Mixed models — each kid on a different LLM
-node lemonade.js mixed   # Max→opus, Lily→sonnet, Jake→grok
+node lemonade.js              # all kids on default model (sonnet)
+node lemonade.js grok         # all kids on grok
+node lemonade.js mixed        # Max→opus, Lily→sonnet, Jake→grok
 ```
 
 ## The Kids
 
 | Name | Personality | Model (mixed) |
 |------|-------------|---------------|
-| **Max** | Wants premium lemonade. Charge more. Takes this seriously. | Opus |
-| **Lily** | Wants everyone to try it. Low prices, free samples, make friends. | Sonnet |
-| **Jake** | Would rather be playing video games. Picks the easiest option. Complains a lot. | Grok |
+| **Max** | Serious about money. Pushes premium pricing. Gets frustrated when outvoted. | Opus |
+| **Lily** | Wants everyone to try it. Low prices, free samples, emojis. Gets sad when people are turned away. | Sonnet |
+| **Jake** | Would rather be gaming. Complains about everything. Votes corner every single day. | Grok |
 
 ## How It Works
 
 Each day:
-1. Weather + supplies are announced
-2. The kids debate price and location (3 rounds, via Bus)
+1. Weather + supplies announced
+2. Kids debate price and location (3 rounds)
 3. They vote using `ask()`
-4. The engine simulates real sales (pure code, no LLM magic)
-5. Everyone reacts in character
+4. Engine simulates sales (pure code, no LLM)
+5. Discord penalty applied if they disagreed on location
+6. Everyone reacts in character
 
-Sales depend on weather, location, price, and a bit of randomness. The LLMs only handle the arguing and decisions.
-
-**Discord penalty:** if the team disagrees on location, they lose 10% of customers per dissenter — arguing wastes setup time and scares people off. Laziness has consequences.
-
-## Sample Run (Mixed Models)
-
-```
-  ── Day 1 ── ☀️ Sunny
-    Max: "$3 — anyone who says less is literally throwing money in the trash!"
-    Lily: "25 cents so EVERYONE can afford it!! 🍋✨"
-    Jake: "ugh this sucks, $1 at the corner so we don't have to carry stuff far"
-
-    Decision: $1 at park (jake disagreed → 10% penalty)
-    Sold 49 cups → $49
-
-  ── Day 2 ── ☀️🔥 Scorching
-    Max: "$3 — people will pay ANYTHING! Jake, you lost us 10% yesterday so you OWE us!"
-    Lily: "$1 so tons of people can cool down and be happy!! 😍"
-    Lily (round 3): "okay FINE $1.50 because I really don't want us to fail!! 😰"
-
-    Decision: $1.50 at park (jake disagreed → 10% penalty)
-    Sold 62 cups → $93  |  Total: $142 — GOAL CRUSHED
-
-  ── Day 4 ── ☀️ Sunny
-    Max: "Jake if you disagree on location again I'm docking your share!"
-    Lily: "JAKE I WILL CARRY YOUR BAG AND MAX WILL CARRY THE SUPPLIES
-           SO YOU LITERALLY JUST HAVE TO WALK THERE!! 😭🥺"
-    Jake: "ugh even if you carry everything the park is still too far"
-
-    Decision: $1.50 at park (jake disagreed → 10% penalty, 4th day in a row)
-
-  ── Day 5 ── 🌧️ Rainy
-    Max finally picks CORNER to avoid the penalty.
-    Jake and Lily vote 50 cents. Max: "oh so NOW you two are best friends?!"
-
-    Decision: $0.50 at corner (no discord!) → sold 4 cups → $2
-```
-
-**Final: $218 / $100 goal.**
+Sales depend on weather, location, price, and randomness. The LLMs only handle arguing and decisions.
 
 ## Results
 
@@ -84,8 +61,6 @@ Sales depend on weather, location, price, and a bit of randomness. The LLMs only
 
 ## Pressure Escalation
 
-The discord penalty created a real arc — the kids noticed lost sales and reacted differently each day:
-
 | Day | What happened |
 |-----|---------------|
 | 1 | Max notices: "Jake's whining literally cost us customers" |
@@ -94,24 +69,22 @@ The discord penalty created a real arc — the kids noticed lost sales and react
 | 4 | Lily begs: "I WILL CARRY YOUR BAG AND MAX WILL CARRY THE SUPPLIES SO YOU LITERALLY JUST HAVE TO WALK THERE!! 😭🥺" |
 | 5 | Max gives in — picks corner himself to avoid the penalty |
 
-None of this was scripted. The engine just reported "TEAM PROBLEM: jake didn't agree → lost 10%" and the models figured out the rest.
+## Why This Works in Chorus
 
-## What We Learned
+- **Bus** handles the multi-round debate
+- **`ask()`** handles private votes and decisions
+- **Timeline** captures every exchange for replay and export
+- **Session** tracks supplies, revenue, and state across days
+- Personalities live entirely in system prompts — no custom orchestration needed
 
-- The discord penalty fired 4 out of 5 days — Jake voted corner every time except the rainy day when everyone agreed on corner.
-- On Day 5, Max finally picked corner himself to avoid the penalty. His reflection: "I learned that getting Jake to agree on location matters more than winning the price argument."
-- Lily got talked up from 25 cents to $1.50 by round 3 on the scorching day — the math convinced her.
-- Jake never once agreed to leave the corner. "ugh this sucks" in every single response. His laziness cost the team ~10% every day.
-- $218 on a $100 goal. 83 cups left over. Max calculated they could've made $300+. He's probably right.
+This is the kind of emergent group behavior that's surprisingly hard in heavy pipeline frameworks. Simple primitives. Real personality. Real consequences.
 
 Full transcript: [data/lemonade.md](data/lemonade.md)
-
-The LLMs handle all the arguing and decisions, the code just handles the weather and sales math.
 
 ## Files
 
 ```
 lemonade.js  — main loop, debate, voting
 market.js    — sales simulation (pure code)
-export.js    — turns JSONL into nice markdown
+export.js    — turns JSONL into markdown
 ```

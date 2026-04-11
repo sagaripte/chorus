@@ -12,9 +12,9 @@ They have real supplies, real weather, and real money on the line. If anyone dis
 
 No scripting. No hand-holding.
 
-- Jake refused to walk to the park **4 days in a row** → cost the team real revenue every single day
-- Lily went from "25 cents!!" to begging: *"I WILL CARRY YOUR BAG AND MAX WILL CARRY THE SUPPLIES SO YOU LITERALLY JUST HAVE TO WALK THERE!! 😭"*
-- Max started guilt-tripping and threatening to dock Jake's share of the profits
+- Jake (Grok) refused to walk to the park **4 days in a row** → cost the team real revenue every single day
+- Lily (Sonnet) went from "25 cents!!" to begging: *"I WILL CARRY YOUR BAG AND MAX WILL CARRY THE SUPPLIES SO YOU LITERALLY JUST HAVE TO WALK THERE!! 😭"*
+- Max (Opus) started guilt-tripping and threatening to dock Jake's share of the profits
 - On the rainy final day, they **finally all agreed**… on the corner
 
 Final result: **$218 / $100 goal**, with 83 cups left over.

@@ -145,7 +145,7 @@ if (voteHistory.length > 1) {
 
 push('---');
 push();
-push(`*Generated from timeline by [Chorus](https://github.com/anthropics/chorus) — the multi-agent LLM framework.*`);
+push(`*Generated from timeline by [Chorus](https://github.com/sagaripte/chorus) — the multi-agent LLM framework.*`);
 
 writeFileSync(output, lines.join('\n'));
 console.log(`Exported to ${output}`);

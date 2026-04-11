@@ -43,24 +43,31 @@ export class Agent {
   #hooks = {};
 
   /**
-   * @param {string} id           — unique id (filename + provider session key)
-   * @param {string} systemPrompt — full system prompt
-   * @param {object} opts
-   * @param {string}   opts.model      — model alias from registry
-   * @param {string}   opts.dataDir    — JSONL directory (default 'data')
-   * @param {Store}    opts.store      — custom Store instance (overrides dataDir)
-   * @param {Timeline} opts.timeline   — auto-log every send() response
-   * @param {number}   opts.maxHistory — max messages per LLM call
-   * @param {number}   opts.maxTokens
-   * @param {number}   opts.temperature
+   * Create an agent.
+   *
+   * Two call styles:
+   *   new Agent('id', 'system prompt', { model: 'sonnet', ... })   // positional
+   *   new Agent({ id: 'id', systemPrompt: '...', model: 'sonnet', ... })  // object
+   *
+   * @param {string|object} idOrOpts — agent id, or full options object
+   * @param {string} [systemPrompt]  — system prompt (positional style)
+   * @param {object} [opts]          — options (positional style)
    */
-  constructor(id, systemPrompt, opts = {}) {
-    this.id = id;
+  constructor(idOrOpts, systemPrompt, opts = {}) {
+    // Support object-style constructor: new Agent({ id, systemPrompt, model, ... })
+    if (typeof idOrOpts === 'object') {
+      const { id, systemPrompt: sp, ...rest } = idOrOpts;
+      idOrOpts = id;
+      systemPrompt = sp;
+      opts = rest;
+    }
+
+    this.id = idOrOpts;
     this.systemPrompt = systemPrompt;
     this.model = opts.model || null;
     this.opts = { ...DEFAULTS, ...opts };
 
-    this.#store = opts.store || new FileStore(join(opts.dataDir || 'data', `${id}.jsonl`));
+    this.#store = opts.store || new FileStore(join(opts.dataDir || 'data', `${this.id}.jsonl`));
     this.#file = this.#store.path || null;
     this.#timeline = opts.timeline || null;
     this.#maxCalls = opts.maxCalls || Infinity;
@@ -284,6 +291,11 @@ export class Agent {
   // =========================================================================
   // CLEANUP
   // =========================================================================
+
+  /** Reset conversation to just the system prompt. Useful for pipeline agents between tasks. */
+  reset() {
+    this.#store.write([JSON.stringify({ role: 'system', content: this.systemPrompt })]);
+  }
 
   async destroy() {
     try {

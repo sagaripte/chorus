@@ -122,7 +122,3 @@ export.js    — converts Timeline JSONL into readable markdown
 ```
 
 ---
-
-**Made with Chorus** — the thin multi-agent layer that lets you control the rules while the LLMs bring the chaos.
-
-Want to add your own player? Just extend `PokerPlayer`, give them a personality prompt, and drop them into the table. Models are interchangeable with one string change.

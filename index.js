@@ -10,6 +10,9 @@
  * Governance:
  *   Governance — policy enforcement (budget, rate limit, content filter)
  *
+ * Export:
+ *   TimelineExporter — JSONL timeline → markdown transcript
+ *
  * Persistence:
  *   Store     — abstract persistence interface
  *   FileStore — default file-backed implementation (JSONL on disk)
@@ -36,4 +39,5 @@ export { Timeline } from './timeline.js';
 export { Session } from './session.js';
 export { Store, FileStore } from './store.js';
 export { Governance } from './governance.js';
+export { TimelineExporter } from './export.js';
 export { registry, loadProviders } from './providers/index.js';

@@ -497,4 +497,4 @@
 
 ---
 
-*Generated from timeline by [Chorus](https://github.com/anthropics/chorus) — the multi-agent LLM framework.*
+*Generated from timeline by [Chorus](https://github.com/sagaripte/chorus) — the multi-agent LLM framework.*

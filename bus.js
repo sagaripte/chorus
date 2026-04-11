@@ -23,6 +23,14 @@ export class Bus {
     return this; // chainable
   }
 
+  once(event, fn) {
+    const wrapper = (...args) => {
+      this.off(event, wrapper);
+      fn(...args);
+    };
+    return this.on(event, wrapper);
+  }
+
   off(event, fn) {
     if (event === '*') {
       this.#wildcards = this.#wildcards.filter(f => f !== fn);

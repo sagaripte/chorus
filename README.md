@@ -266,16 +266,6 @@ Chorus stays deliberately thin. Read [DESIGN.md](DESIGN.md) for the full rationa
 6. **Zero dependencies.** Native `fetch`, `fs`, `crypto`. No SDK lock-in.
 7. **Parallel by default.** Each agent owns its state. Run N concurrently.
 
-### Prior Art
-
-| Pattern | Origin | Role in Chorus |
-|---------|--------|----------------|
-| Pub/sub messaging | MQTT, Redis | Bus — event routing |
-| Append-only logs | Kafka, journald | Timeline + conversation files |
-| Log compaction | Kafka | `compact()` — summarize old, keep recent |
-| Actor model | Erlang, Akka | Agent — independent state, message-driven |
-| Conversation-as-context | ChatML, OpenAI API | Agent — growing message array |
-
 ---
 
 Made with curiosity and a healthy respect for tokens.

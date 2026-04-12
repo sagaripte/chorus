@@ -140,3 +140,17 @@ vite.config.ts.timestamp-*
 .DS_Store
 models.txt
 oss
+
+# Example run data (regenerated on each run)
+examples/*/data/
+examples/**/data/
+
+# Draft/temp files in examples
+examples/**/r1.md
+examples/**/r2.md
+examples/**/s1.js
+examples/**/s1.md
+examples/**/c1.md
+examples/**/rm1.md
+examples/**/l1.md
+examples/**/run1/

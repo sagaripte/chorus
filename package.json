@@ -1,12 +1,15 @@
 {
-  "name": "@agent-house/framework",
+  "name": "chorus",
   "version": "1.0.0",
   "type": "module",
-  "description": "Reusable multi-agent framework — append-only conversations, multi-provider LLM, event bus, compaction",
+  "description": "Four primitives for multi-agent LLM systems. Zero dependencies.",
   "main": "index.js",
   "exports": {
     ".": "./index.js",
     "./providers": "./providers/index.js"
+  },
+  "scripts": {
+    "test": "node test/agent.test.js && node test/bus.test.js && node test/store.test.js && node test/timeline.test.js"
   },
   "dependencies": {}
 }

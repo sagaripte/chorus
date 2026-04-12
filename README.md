@@ -254,7 +254,7 @@ The framework doesn't enforce architecture. These emerge from combining the prim
 
 ## Design
 
-Chorus stays deliberately thin. Read [DESIGN.md](DESIGN.md) for the full rationale.
+Chorus stays deliberately thin. Read [DESIGN.md](DESIGN.md) for the full rationale. See [MODEL_NOTES.md](MODEL_NOTES.md) for observations on how different LLMs behave in multi-agent systems.
 
 ### Principles
 

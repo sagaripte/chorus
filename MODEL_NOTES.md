@@ -98,15 +98,15 @@ Your results will vary. Prompts, temperature, and role assignments all matter mo
 
 ## Summary
 
-| Model | Strength | Weakness | Best role | Cost |
-|-------|----------|----------|-----------|------|
-| **Opus** | Deep reasoning, strategic | Verbose, expensive | Lead, strategist | $$$ |
-| **Sonnet** | Adaptive, balanced | Can flip too easily | Mediator, evolving character | $$ |
-| **Grok** | Consistent, immovable | Repetitive, inflexible | Hardliner, holdout | $$ |
-| **Grok Reasoning** | Clinical, precise | Robotic, no drama | Analyst, observer | $$ |
-| **Haiku** | Fast, cheap, punchy | Thin on depth | Supporting, high-volume | $ |
-| **Flash 2.5** | Cheapest | Truncates in dialogue | One-shot tasks only | ¢ |
-| **Flash 3.1 Lite** | Cheap, completes responses | Shallow arguments | Supporting cast | ¢ |
+| Model | Strength | Weakness | Best role |
+|-------|----------|----------|-----------|
+| **Opus** | Deep reasoning, strategic | Verbose, expensive | Lead, strategist |
+| **Sonnet** | Adaptive, balanced | Can flip too easily | Mediator, evolving character |
+| **Grok** | Consistent, immovable | Repetitive, inflexible | Hardliner, holdout |
+| **Grok Reasoning** | Clinical, precise | Robotic, no drama | Analyst, observer |
+| **Haiku** | Fast, cheap, punchy | Thin on depth | Supporting, high-volume |
+| **Flash 2.5** | Cheapest | Truncates in dialogue | One-shot tasks only |
+| **Flash 3.1 Lite** | Cheap, completes responses | Shallow arguments | Supporting cast |
 
 ## What Matters More Than the Model
 
